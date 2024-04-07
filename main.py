@@ -13,6 +13,7 @@ def scrape():
             with open(f'torrent{nama_file}.txt', 'w+') as generated:
                 for judul in pencarian.findAll('a', 'button is-primary is-fullwidth'):
                     generated.writelines(f'https://onejav.com{judul['href']}\n')
+                    print(f'{nama_file}.txt berhasil dibuat....')
                 generated.close()
 
 scrape()
